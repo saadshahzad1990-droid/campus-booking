@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1f3fd1">
   <title>Campus Booking · shared spaces &amp; equipment</title>
-  <meta name="description" content="Book shared rooms and equipment on campus for a set time, check in, and finish on time.">
+  <meta name="description" content="Book shared rooms, places and machines on campus for as long as you need, together with your group, and hand them over on time.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231f3fd1'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Cpath d='M16 10v6l4 3' stroke='%23ffc83d' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,27 +16,30 @@
   <div class="stage">
     <aside class="side" aria-label="About this prototype">
       <div class="side-in">
-        <p class="side-kicker">GUI Design &amp; Web Optimization · v2 prototype</p>
+        <p class="side-kicker">GUI Design &amp; Web Optimization · v3 prototype</p>
         <h2 class="side-title">Book it. Use it. Hand it over on time.</h2>
-        <p class="side-text">A booking app for shared rooms and equipment on campus. Every booking is tied to your ID, has a fixed length and a clear end time, and the app helps you start and finish on time.</p>
+        <p class="side-text">Book a place or a whole room, a machine, or both at once. Plan weeks ahead on the calendar, bring your group, and hand over on time with the 5-minute rule.</p>
         <div class="qr-wrap">
           <div id="qr" class="qr" aria-label="QR code to open this app on your phone"></div>
           <p class="side-text small">Scan to try it on your phone.</p>
         </div>
-        <h3 class="side-h">What changed from v1</h3>
+        <h3 class="side-h">Changed after testing v2</h3>
         <ul class="side-list">
-          <li>From one 3D printer to any shared space or machine</li>
-          <li>Booking by ID, with a fixed length from 15 min up</li>
-          <li>See how many people are in a room before you go</li>
-          <li>Check in, report damage, countdown and check out</li>
-          <li>Booking list at the top, limits always shown</li>
+          <li>Full month calendar, up to 90 days ahead</li>
+          <li>Book one place or the whole room</li>
+          <li>Longer bookings: pick as many sessions as you need</li>
+          <li>Back-to-back bookings with a 5-minute handover</li>
+          <li>Book a room and the laser cutter or podcast booth together</li>
+          <li>Invite people, repeat weekly, change a booking</li>
+          <li>My bookings always one tap away</li>
         </ul>
         <div class="side-demo" id="side-demo"></div>
       </div>
     </aside>
 
     <div class="phone-shell">
-      <div id="app" class="app" aria-live="polite"></div>
+      <main id="app" class="app"></main>
+      <nav id="tabs" class="tabs" aria-label="Main" hidden></nav>
       <div id="sheet-root"></div>
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
     </div>
